@@ -10,7 +10,7 @@ class Martynov extends StatefulWidget {
 
 class _MartynovState extends State<Martynov> with SingleTickerProviderStateMixin {
   final _controller = AnimatedGlitchController(
-    frequency: const Duration(milliseconds: 100),
+    frequency: const Duration(milliseconds: 200),
     level: 1,
     distortionShift: const DistortionShift(count: 3),
   );
@@ -48,13 +48,13 @@ class _MartynovState extends State<Martynov> with SingleTickerProviderStateMixin
       ),
       body: Center(
         child: SizedBox.square(
-          dimension: 64,
+          dimension: 96,
           child: AnimatedGlitch(
             controller: _controller,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(16.0),
               child: CircularProgressIndicator(
-                strokeWidth: 8,
+                strokeWidth: 16,
                 //color: indicatorColor,
                 valueColor: _colorAnimation,
               ),
