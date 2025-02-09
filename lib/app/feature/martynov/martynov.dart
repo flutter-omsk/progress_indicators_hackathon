@@ -55,7 +55,6 @@ class _MartynovState extends State<Martynov> with SingleTickerProviderStateMixin
               padding: const EdgeInsets.all(16.0),
               child: CircularProgressIndicator(
                 strokeWidth: 16,
-                //color: indicatorColor,
                 valueColor: _colorAnimation,
               ),
             ),
