@@ -1,14 +1,15 @@
 import 'package:animated_glitch/animated_glitch.dart';
 import 'package:flutter/material.dart';
 
-class Martynov extends StatefulWidget {
-  const Martynov({super.key});
+class GlitchProgressIndicator extends StatefulWidget {
+  const GlitchProgressIndicator({super.key});
 
   @override
-  State<Martynov> createState() => _MartynovState();
+  State<GlitchProgressIndicator> createState() => _GlitchProgressIndicatorState();
 }
 
-class _MartynovState extends State<Martynov> with SingleTickerProviderStateMixin {
+class _GlitchProgressIndicatorState extends State<GlitchProgressIndicator>
+    with SingleTickerProviderStateMixin {
   final _controller = AnimatedGlitchController(
     frequency: const Duration(milliseconds: 200),
     level: 1,
@@ -44,7 +45,7 @@ class _MartynovState extends State<Martynov> with SingleTickerProviderStateMixin
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Саша Мартынов'),
+        title: Text('Прогресс индикатор с глитчем'),
       ),
       body: Center(
         child: SizedBox.square(

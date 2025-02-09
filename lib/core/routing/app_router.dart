@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:progress_indicators_hackathon/app/feature/martynov/martynov.dart';
+import 'package:progress_indicators_hackathon/app/feature/martynov/example.dart';
+import 'package:progress_indicators_hackathon/app/feature/martynov/glitch.dart';
 import 'package:progress_indicators_hackathon/app/feature/progress_indicators/progress_indicators_screen.dart';
 import 'package:progress_indicators_hackathon/app/feature/settings/presentation/settings_screen/settings_screen.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -11,28 +12,14 @@ part 'app_router.g.dart';
 enum AppRoute {
   home('/'),
   settings('settings'),
-  martynov('martynov'),
+  glitch('glitch'),
+  example('example'),
   ;
 
   const AppRoute(this.path);
 
   final String path;
 }
-
-final settingsRoute = GoRoute(
-  path: AppRoute.settings.path,
-  name: AppRoute.settings.name,
-  builder: (_, __) => const SettingsScreen(),
-);
-
-// TODO: А потом в этот
-final participantRoutes = [
-  GoRoute(
-    path: AppRoute.martynov.path,
-    name: AppRoute.martynov.name,
-    builder: (_, __) => const Martynov(),
-  ),
-];
 
 @Riverpod(keepAlive: true)
 GoRouter goRouter(Ref ref) {
@@ -51,3 +38,23 @@ GoRouter goRouter(Ref ref) {
     ],
   );
 }
+
+final settingsRoute = GoRoute(
+  path: AppRoute.settings.path,
+  name: AppRoute.settings.name,
+  builder: (_, __) => const SettingsScreen(),
+);
+
+// TODO: А потом в этот
+final participantRoutes = [
+  GoRoute(
+    path: AppRoute.glitch.path,
+    name: AppRoute.glitch.name,
+    builder: (_, __) => const GlitchProgressIndicator(),
+  ),
+  GoRoute(
+    path: AppRoute.example.path,
+    name: AppRoute.example.name,
+    builder: (_, __) => const Example(),
+  ),
+];

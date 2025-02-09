@@ -36,31 +36,9 @@ class MyApp extends ConsumerWidget {
       onGenerateTitle: (context) => context.l10n.appTitle,
       theme: ThemeData(
         colorScheme: colorScheme,
-        expansionTileTheme: ExpansionTileThemeData(
-          backgroundColor: colorScheme.secondaryContainer,
-          collapsedBackgroundColor: colorScheme.surface,
-          shape: Border(
-            bottom: BorderSide(
-              color: colorScheme.secondary,
-              width: 2.0,
-            ),
-          ),
-          collapsedShape: const Border(),
-        ),
       ),
       darkTheme: ThemeData(
         colorScheme: colorSchemeDark,
-        expansionTileTheme: ExpansionTileThemeData(
-          backgroundColor: colorSchemeDark.secondaryContainer,
-          collapsedBackgroundColor: colorSchemeDark.surface,
-          shape: Border(
-            bottom: BorderSide(
-              color: colorScheme.secondary,
-              width: 2.0,
-            ),
-          ),
-          collapsedShape: const Border(),
-        ),
       ),
       themeMode: settingsController.value,
     );

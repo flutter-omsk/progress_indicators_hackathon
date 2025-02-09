@@ -8,7 +8,7 @@
 
 ## Подготовка
 
-1. Создать папку со своей фамилией и виджетом заготовкой для индикатора по аналогии с Martynov
+1. Создать папку со своей фамилией и виджетом заготовкой для индикатора по аналогии с Example
 2. Добавить роут в файл `lib/core/routing/app_router.dart`
 3. Добавить индикатор в список `lib/app/feature/progress_indicators/progress_indicators_list.dart`
 
@@ -24,7 +24,7 @@
 dart pub global activate spider
 ```
 
-Для генерации ассетов выполните команду:
+Для генерации:
 
 ```bash
 spider build

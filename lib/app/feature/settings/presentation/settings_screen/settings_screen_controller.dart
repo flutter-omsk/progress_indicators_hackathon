@@ -15,9 +15,7 @@ class SettingsScreenController extends _$SettingsScreenController {
   }
 
   Future<void> updateThemeMode(ThemeMode? newThemeMode) async {
-    if (newThemeMode == null) return;
-
-    if (newThemeMode == state.value) return;
+    if (newThemeMode == null || newThemeMode == state.value) return;
 
     state = AsyncData(newThemeMode);
 
