@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:progress_indicators_hackathon/app/feature/martynov/martynov.dart';
 import 'package:progress_indicators_hackathon/app/feature/progress_indicators/progress_indicators_screen.dart';
@@ -34,7 +35,7 @@ final participantRoutes = [
 ];
 
 @Riverpod(keepAlive: true)
-GoRouter goRouter(GoRouterRef ref) {
+GoRouter goRouter(Ref ref) {
   return GoRouter(
     initialLocation: AppRoute.home.path,
     routes: [

@@ -1,4 +1,4 @@
-# Хакатон лоадеров (индикаторов прогресса)
+# Хакатон лоадеров (индикаторов загрузки)
 
 <p align="center"><img src="./assets/rasters/logo.png" alt="Cover" width="300"/></p>
 

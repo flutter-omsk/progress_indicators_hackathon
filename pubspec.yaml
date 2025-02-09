@@ -9,6 +9,7 @@ environment:
   sdk: ^3.6.1
 
 dependencies:
+  animated_glitch: 2.0.0+2
   flutter:
     sdk: flutter
   flutter_localizations:
