@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:progress_indicators_hackathon/app/feature/marinalvdgs/camomile_progress_indicator.dart';
 import 'package:progress_indicators_hackathon/app/feature/martynov/example.dart';
 import 'package:progress_indicators_hackathon/app/feature/martynov/glitch.dart';
 import 'package:progress_indicators_hackathon/app/feature/progress_indicators/progress_indicators_screen.dart';
@@ -13,6 +14,7 @@ enum AppRoute {
   home('/'),
   settings('settings'),
   glitch('glitch'),
+  camomile('camomile'),
   example('example'),
   ;
 
@@ -51,6 +53,11 @@ final participantRoutes = [
     path: AppRoute.glitch.path,
     name: AppRoute.glitch.name,
     builder: (_, __) => const GlitchProgressIndicator(),
+  ),
+  GoRoute(
+    path: AppRoute.camomile.path,
+    name: AppRoute.camomile.name,
+    builder: (_, __) => const CamomileProgressIndicator(),
   ),
   GoRoute(
     path: AppRoute.example.path,

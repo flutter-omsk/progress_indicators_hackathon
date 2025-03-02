@@ -9,6 +9,11 @@ final progressIndicators = <ProgressIndicatorInfo>[
     route: AppRoute.glitch.name,
   ),
   ProgressIndicatorInfo(
+    title: 'Ромашка',
+    author: 'Marina',
+    route: AppRoute.camomile.name,
+  ),
+  ProgressIndicatorInfo(
     title: 'Название индикатора',
     author: 'Имя автора',
     route: AppRoute.example.name,
